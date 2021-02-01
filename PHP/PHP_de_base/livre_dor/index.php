@@ -3,14 +3,15 @@ require_once 'database.php';
 require_once 'web/header.php';
 require_once 'functions.php';
 require 'Class/Message.php';
+require 'Class/Guestbook.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $message = new Message(testInput($_POST['username']), testInput($_POST['message']));
     if ($message->isValid()) {
         // add to DB
         $bdd = getConnection();
-
-
+        $guestbook = new Guestbook($bdd);
+        $guestbook->addMessage($message);
     } else {
         $errors = $message->getErrors();
         var_dump($errors); // FOR TEST - REMOVE
@@ -30,5 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <div>
     <h2>Messages</h2>
-   
+    
+    
+
+
 </div>
