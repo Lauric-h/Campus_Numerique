@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+  <script src="https://kit.fontawesome.com/264c9e1633.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/style_bootstrap.css">
+  <title>Au four à pizza</title>
+</head>
+<body>
+
+  <header class="container-fluid header-color">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <!-- Hamburger menu on mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        <!---->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="catalogue.html">Catalogue</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Notre équipe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-xl-1 d-flex justify-content-end">
+          <button type="button" class="btn button-header-color">J'ai faim !</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid bg-img" style="background-image: url(img/pizza.jpg)">
+      <div class="row p-5 bg-text">
+        <div class="col-sm-8 col-xl-2 col-lg-3 col-md-4 text-light bg-text">
+          <h2>Pizzeria</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam expedita iusto corporis cum unde inventore, ducimus quia nulla id modi tempore perferendis quasi iure voluptatum et? Excepturi, aliquam esse.</p>
+        </div>
+      </div>  
+  </div>
+
+  <div class="container mt-4">
+    <h2 class="text-center">On vous recommande</h2>
+    <div class="row justify-content-around align-items-around mt-4">
+      <div class="card col-4 shadow mb-5" style="width: 25rem;">
+        <img src="img/marguerita.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Marguerita</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, veniam sit eius aperiam praesentium odit dolorem sed facere!</p>
+          <a href="#" class="btn header-color accent">Commander</a>
+        </div>
+      </div>  
+      <div class="card col-4 shadow mb-5" style="width: 25rem;">
+        <img src="img/pepperoni.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pepperoni</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, veniam sit eius aperiam praesentium odit dolorem sed facere!</p>
+          <a href="#" class="btn header-color accent">Commander</a>
+        </div>
+      </div>
+      <div class="card col-4 shadow mb-5" style="width: 25rem;">
+        <img src="img/fromage.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">4 fromages</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, veniam sit eius aperiam praesentium odit dolorem sed facere!</p>
+          <a href="#" class="btn header-color accent">Commander</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Menus</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Ingrédients</th>
+          <th scope="col">Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Burger</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto autem assumenda deleniti delectus reprehenderit</td>
+          <td>12.00€</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Aoste</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto autem assumenda deleniti delectus reprehenderit</td>
+          <td>10.00€</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Parisienne</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto autem assumenda deleniti delectus reprehenderit</td>
+          <td>18.00€</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Savoyarde</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto autem assumenda deleniti delectus reprehenderit</td>
+          <td>14.00€</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Annécienne</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iusto autem assumenda deleniti delectus reprehenderit</td>
+          <td>15.00€</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="container-fluid header-color">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CGV</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="navbar-nav col-lg-2 col-xl-1 d-flex justify-content-end">
+            <div class="nav-item d-flex justify-content-around w-100">
+              <p><a href="http://www.facebook.fr" target="_blanks" class="text-dark"><i class="fab fa-facebook fs-3"></i></a></p>
+              <p><a href="http://www.twitter.com#" target="_blank" class="text-dark"><i class="fab fa-twitter fs-3"></i></a></p>
+              <p><a href="http://www.instagram.com" target="_blank" class="text-dark"><i class="fab fa-instagram fs-3"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

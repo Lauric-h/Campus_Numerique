@@ -1,0 +1,64 @@
+body {
+  font-family: 'Prompt', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+
+.header-color,
+.accent {
+  background: radial-gradient(
+                              97.15% 25433.15% at 97.15% 82.58%, 
+                              #2BB7DA 0%,
+                              rgba(43, 186, 203, 0.904896) 11.46%, 
+                              rgba(0, 223, 59, 0.78) 68.23%);
+}
+
+.button-header-color {
+  background: #2D314D;
+  color: #fff;
+}
+
+.button-header-color:hover, 
+.button-header-color:active {
+  background: #fff;
+  color: #2D314D;
+} 
+
+.accent {
+  border: none;
+  color: #2D314D;
+  transition: all .5s ease;
+}
+
+.accent:active,
+.accent:hover {
+  transform: scale(1.1)
+}
+
+.carrouselSize {
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width:900px) {
+  .carrouselSize {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bg-text {
+    margin-left: 5em;;
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,323 @@
+:root {
+  --color-gradient: radial-gradient(
+                              97.15% 25433.15% at 97.15% 82.58%, 
+                              #2BB7DA 0%,
+                              rgba(43, 186, 203, 0.904896) 11.46%, 
+                              rgba(0, 223, 59, 0.78) 68.23%);
+  --color-dark: #2D314D;
+  --color-gradient-desktop: linear-gradient(
+                              146.18deg, rgba(56, 230, 103, 0.71) 21.9%, 
+                              rgba(127, 235, 156, 0.6532) 96.89%)
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+p,
+ul,
+table {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==================
+  General typography
+  ================== */
+
+/* header & footer */
+
+.header,
+.footer {
+  background: var(--color-gradient);
+}
+
+.footer {
+  margin-top: 1.5em;
+}
+
+.footer__links > * {
+  color: black;
+  font-size: .75rem;
+}
+
+i {
+  font-size: 1.5rem;
+  color: black;
+}
+
+a + a {
+  margin-left: .5em;
+}
+
+/* blocks */
+
+.title__text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container__subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* table */
+
+.experience__table {
+    margin:20px auto;
+    color: black;
+    border: medium solid #000000;
+    border-collapse: collapse;
+    font-size:0.7em;
+}
+
+th {
+    border: thin solid #000000;
+    padding: 10px;
+    font-weight: bold;
+}
+
+td {
+    border: thin solid #000000;
+    padding: 5px;
+    text-align: center;
+}
+
+.experience__table__caption {
+  display: none;
+}
+
+/* button */
+
+.button {
+  padding: .5em 1em;
+  background: var(--color-dark);
+  color: #fff;
+  border-radius: 10px;
+  transition: .5s all ease;
+}
+
+/* hover states */
+.button:active, 
+.button:hover {
+  color: var(--color-dark);
+  background: #fff;
+}
+
+.footer__logos i:active,
+.footer__logos i:hover,
+.footer__links a:active,
+.footer__links a:hover,
+.nav__desktop__item__link:active, 
+.nav__desktop__item__link:hover {
+  color: #fff;
+  transition: .3s;
+}
+
+.nav__desktop__item__link::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #fff;
+  width: 0%;
+  transition: .35s ease-in;
+}
+
+.nav__desktop__item__link:active::after,
+.nav__desktop__item__link:hover::after {
+  width: 100%;
+}
+
+/* ==================
+        layout
+  ================== */
+
+.container {
+  width: 80%;
+  margin: 1em auto;
+}
+
+/* header & footer */
+
+.container--header,
+.container--footer {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  height: 4em;
+}
+
+.header__button,
+.footer__links,
+.footer__logos {
+  position: absolute;
+  top: 10px;
+}
+
+.header__nav {
+  position: absolute;
+  top: 20px;
+}
+
+.header__button,
+.footer__logos {
+  right: 0; 
+}
+
+.competences__list {
+  margin-left: 1.5em;
+}
+
+/* Menu visibility */
+
+.nav__desktop {
+  visibility: hidden;
+}
+
+/* ==================
+      media queries
+  ================== */
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .presentation,
+  .competences,
+  .experience {
+    position: relative;
+    height: 300px;
+  }
+
+  .block__img {
+    display: block;
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  #lilian {
+    object-position: center;
+  }
+
+  #rod {
+    object-position: 25% 20%;
+  }
+
+  .container__subtitle {
+    position: absolute;
+    left: 0;
+    top: 10%;
+  }
+
+  .block__text {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 40%;
+  }
+
+  .experience__table {
+    top: 15%;
+    min-width: 270px; /*avoid overflow on img or footer */
+  }
+
+  .presentation__title {
+    top: 10%;
+  }
+
+  .presentation__title,
+  .presentation__text {
+    left: 5%;
+  }
+
+  .presentation__text {
+    top: 35%;
+    width: 35%;
+  }
+
+  /*right-left inversion*/
+  .competences__img {
+    left: 0;
+  }
+
+  .competences__title,
+  .competences__list {
+    left: 58%;
+  }
+
+  /*bg green*/
+  .presentation {
+    background: var(--color-gradient-desktop);
+  }
+
+  .footer__links a{
+    font-size: 1rem;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+
+  a + a {
+    margin-left: 1.5em;
+  }
+
+  .footer__links,
+  .footer__logos {
+    position: absolute;
+    top: 25%;
+  }
+
+  .title__main {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  /* desktop menu */
+  .nav__desktop {
+    visibility: visible;
+    display: flex;
+    list-style: none;
+  }
+
+  .nav__desktop__item + .nav__desktop__item {
+    margin-left: 2em;
+  }
+
+  .nav__desktop__item__link {
+    color: black;
+  }
+
+  .nav__mobile {
+    visibility: hidden;
+  }
+
+} 
+
+
+ 

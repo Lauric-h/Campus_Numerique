@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/264c9e1633.js" crossorigin="anonymous"></script>
+  <title>Contact</title>
+</head>
+
+<body>
+
+  <header class="header header--contact">
+    <h1 class="header__title">Me contacter</h1>
+    <div class="header__content header__content--page-links">
+      <a class="header__content--page-links__link" href="index.html">Retourner à la page d'accueil</a>
+      <a class="header__content--page-links__link" href="hobby.html">Mon hobby</a>
+    </div>
+  </header>
+
+  <div class="container container--contact">
+    <a href="mailto:lebron.james@nba.com" class="container--contact__link">Me contacter</a>
+  </div>
+
+  <form action="https://httpbin.org/post" method="post" class="form">
+    <fieldset class="form__fieldset">
+      <legend class="form__fieldset__legend">Coordonnées</legend>
+
+      <label for="Nom" class="form__fieldset__label">Nom</label>
+      <input type="text" name="Nom" id="Nom" class="form__fieldset__input">
+
+      <label for="Prénom" class="form__fieldset__label">Prénom</label>
+      <input type="text" name="Prénom" id="Prénom" class="form__fieldset__input">
+
+      <label for="Email" class="form__fieldset__label">Email</label>
+      <input type="email" name="Email" placeholder="prenom@nom.com" id="Email" class="form__fieldset__input" required >
+    </fieldset>
+
+    <label for="textarea" class="form__label form__label--margin">Votre texte</label>
+    <textarea name="textarea" id="textarea" placeholder="Écrivez ici..." class="form__label__textarea"></textarea>
+
+    <fieldset class="form__fieldset">
+      <legend class="form__fieldset__legend">Qui est le goat ?</legend>
+
+      <label for="MJ" class="form__fieldset__label">Michael Jordan</label>
+      <input type="radio" id="MJ" name="goat" value="Michael Jordan">
+
+      <label for="LBJ" class="form__fieldset__label">Lebron James</label>
+      <input type="radio" id="LBJ" name="goat" value="Lebron James">
+    </fieldset>
+
+    <fieldset>
+      <legend>Qui s'en rapproche ?</legend>
+      <label for="Bird" class="form__fieldset__label">Larry Bird</label><input type="checkbox" id="Bird" name="contender" value="Larry Bird">
+      <label for="Kareem" class="form__fieldset__label">Kareem Abdul Jabbar</label><input type="checkbox" id="Kareem" name="contender"
+        value="Kareem Abdul Jabbar">
+      <label for="Magic" class="form__fieldset__label">Magic Johnson</label><input type="checkbox" id="Magic" name="contender" value="Magic Johnson">
+    </fieldset>
+
+    <label for="titre" class="form__label">Quel est le plus beau titre ?</label>
+    <select name="titre" id="titre" class="form__select">
+      <option value="2020">2020 Lakers</option>
+      <option value="2016">2016 Cavaliers</option>
+      <option value="2014">2014 Heat</option>
+      <option value="2013">2013 Heat</option>
+    </select>
+
+    <button class="form__button">Envoyer</button>
+  </form>
+
+</body>
+</html>
