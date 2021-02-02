@@ -5,34 +5,39 @@ require_once 'functions.php';
 require 'Class/Message.php';
 require 'Class/Guestbook.php';
 
+// connect to DB
+$bdd = getConnection();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $message = new Message(testInput($_POST['username']), testInput($_POST['message']));
     if ($message->isValid()) {
         // add to DB
-        $bdd = getConnection();
         $guestbook = new Guestbook($bdd);
         $guestbook->addMessage($message);
     } else {
         $errors = $message->getErrors();
-        var_dump($errors); // FOR TEST - REMOVE
     }
-    var_dump($message); // FOR TEST - REMOVE
-
 }
 
+$guestbook = new Guestbook($bdd);
 ?>
 
 <form method="POST" action="">
-  
+    <?php if (!empty($errors['username'])) {
+        echo "<p>" . $errors['username']. "</p>";
+    }
+    ?>
     <input type="text" name="username" placeholder="Nom" autocomplete="off">
+    <?php if (!empty($errors['message'])) {
+        echo "<p>" . $errors['message']. "</p>";
+    }
+    ?>
     <textarea name="message" placeholder="Votre message..."></textarea>
     <button type="submit">Envoyer</button>
 </form>
 
 <div>
     <h2>Messages</h2>
-    
-    
-
-
+    <!-- add condition if guestbook is empty & display msg --> 
+    <?php $guestbook->getMessages(); ?>
 </div>

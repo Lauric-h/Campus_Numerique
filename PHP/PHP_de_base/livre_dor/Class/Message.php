@@ -22,23 +22,22 @@ class Message {
         return true;
     }
 
-    public function getErrors(): array {
-        // logs errors
+    // logs errors
+    public function getErrors(): array{
         $errors = [];
-        if (empty($this->username) || strlen($this->username) <= 3) {
-            $errors = ['Nom d\'utilisateur invalide'];
+        if (!$this->isValid()) {
+            if (empty($this->username)) {
+                $errors['username'] = 'Vous devez entrer un nom';
+            } else if (strlen($this->username) < 3) {
+                $errors['username'] = 'Le pseudo doit être supérieur à 3 lettres';
+            }
+            if (empty($this->message)) {
+                $errors['message'] = 'Vous devez entrer un message';
+            } else if (strlen($this->message) < 10) {
+                $errors['message'] = 'Le message doit être supérieur à 10 lettres';
+            }
         }
-        if (empty($this->message) || strlen($this->message) <= 10) {
-            $errors = array_push($errors, 'Message non valide');
-        }
-        return ['Nom d\'utilisateur invalide', 'Message non valide'];
-    }
-
-    public function toHTML(): string {
-        // format to HTML
-        return "<p><strong><?= $this->username ?></strong><em>le <?= $this->date ?> à 12h00</em><br>
-        <?= $this->message ?>
-        </p>";
+        return $errors;
     }
 }
 
