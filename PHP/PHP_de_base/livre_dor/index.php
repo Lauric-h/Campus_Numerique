@@ -9,7 +9,8 @@ require 'Class/Guestbook.php';
 $bdd = getConnection();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $message = new Message(testInput($_POST['username']), testInput($_POST['message']));
+    $date = new DateTime();
+    $message = new Message(testInput($_POST['username']), testInput($_POST['message']), $date);
     if ($message->isValid()) {
         // add to DB
         $guestbook = new Guestbook($bdd);

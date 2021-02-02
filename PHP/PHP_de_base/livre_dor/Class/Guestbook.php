@@ -8,11 +8,12 @@ class Guestbook {
     // add message to db
     public function addMessage(Message $message) {
         $username = $message->username;
+        $date = $message->date;
         $message = $message->message;
         $insert = $this->fichier->prepare(
-            'INSERT INTO users(username, message)
-             VALUES(?, ?)');
-        $insert->execute(array($username, $message));
+            'INSERT INTO users(username, message, date)
+             VALUES(?, ?, ?)');
+        $insert->execute(array($username, $message, $date));
     }
 
     //get message from db

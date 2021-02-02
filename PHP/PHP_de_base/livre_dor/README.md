@@ -1,3 +1,11 @@
+# Livre d'or 
+Exercice de création d'un livre d'or avec les specs de la série de Grafikart sur le PHP.
+[Lien de la série de Grafikart](https://www.youtube.com/watch?v=aXt6zrAj3lk)
+Utilisation d'une BDD MySQL au lieu d'un fichier texte.
+
+**=> Technos : PHP / MySQL**
+***
+## Specs
 - Page avec formulaire
     - champ nom d'utilisateur
     - bouton
@@ -21,9 +29,9 @@
 
 ***
 ## To do
-- Form / HTML
-- Créer BDD
-- Connexion à la BDD avec PDO
--
+- Valider les données
+- Formater l'heure et la date
+- CSS
+- Checker la correction Grafikart
 
 ***
