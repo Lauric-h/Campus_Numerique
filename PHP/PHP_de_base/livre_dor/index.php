@@ -28,12 +28,12 @@ $guestbook = new Guestbook($bdd);
         echo "<p>" . $errors['username']. "</p>";
     }
     ?>
-    <input type="text" name="username" placeholder="Nom" autocomplete="off">
+    <input value="<?= $_POST['username'] ?? '' ?>" type="text" name="username" placeholder="Nom" autocomplete="off">
     <?php if (!empty($errors['message'])) {
         echo "<p>" . $errors['message']. "</p>";
     }
     ?>
-    <textarea name="message" placeholder="Votre message..."></textarea>
+    <textarea name="message" placeholder="Votre message...">"<?= $_POST['message'] ?? '' ?>"</textarea>
     <button type="submit">Envoyer</button>
 </form>
 
