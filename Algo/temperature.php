@@ -41,7 +41,6 @@ $temp = [1, -0.2, 55, 0.1, -0.05];
 
 function getTempe($arr) {
     $closest = 0;
-    
     for ($i = 0; $i < count($arr); $i++) {
         if ($closest == 0) {
             $closest = $arr[$i];
@@ -52,7 +51,6 @@ function getTempe($arr) {
         }
     }
     return $closest;
-    
 }
 
 echo getTempe($tableauTemp);
