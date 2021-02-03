@@ -46,7 +46,11 @@ class PersonnagesManager {
         // prépare une requêete update
         // assgne des valeurs à la requête
         // exécute la requête
-        $query = $this->db->prepare()
+        $query = $this->db->prepare('UPDATE perso_liste SET forcePerso = :forcePerso, degats = :degats, niveau = :niveau, experience = :experience WHERE id = :id');
+        $query->bindValue(':degats', $perso->damage(), PDO::PARAM_INT);
+        $query->bindValue(':niveau', $perso->level(), PDO::PARAM_INT);
+        $query->bindValue(':experience', $perso->experience(), PDO::PARAM_INT);
+        $query->bindValue(':id', $perso->id(), PDO::PARAM_INT);
     }
 
     public function setDb(PDO $db) {
