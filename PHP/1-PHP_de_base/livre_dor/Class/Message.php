@@ -1,6 +1,8 @@
 <?php
 
 class Message {
+    const LIMIT_USERNAME = 3;
+    const LIMIT_MESSAGE = 10;
     public $username;
     public $message;
     public $date;
@@ -12,30 +14,17 @@ class Message {
     }
 
     public function isValid(): bool {
-        // check if message and username are valid
-        if (empty($this->username) || empty($this->message)) {
-            return false;
-        }
-        if (strlen($this->username) <= 3 || strlen($this->message) <= 10) {
-            return false;
-        }
-        return true;
+        return empty($this->getErrors());
     }
 
     // logs errors
     public function getErrors(): array{
         $errors = [];
-        if (!$this->isValid()) {
-            if (empty($this->username)) {
-                $errors['username'] = 'Vous devez entrer un nom';
-            } else if (strlen($this->username) < 3) {
-                $errors['username'] = 'Le pseudo doit être supérieur à 3 lettres';
-            }
-            if (empty($this->message)) {
-                $errors['message'] = 'Vous devez entrer un message';
-            } else if (strlen($this->message) < 10) {
-                $errors['message'] = 'Le message doit être supérieur à 10 lettres';
-            }
+        if (strlen($this->username) < self::LIMIT_USERNAME) {
+            $errors['username'] = 'Le nom doit être supérieur à 3 lettres';
+        }
+        if (strlen($this->message) < self::LIMIT_MESSAGE) {
+            $errors['message'] = 'Le message doit être supérieur à 10 lettres';
         }
         return $errors;
     }
