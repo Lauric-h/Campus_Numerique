@@ -1,11 +1,15 @@
 <?php
 class Personnage {
     private $id;
-    private $name;
-    private $strength;
-    private $damage;
-    private $level;
+    private $nom;
+    private $forcePerso;
+    private $degats;
+    private $niveau;
     private $experience;
+
+    public function __construct($data) {
+        $this->hydrate($data);
+    }
 
     public function hydrate(array $data) {
         foreach($data as $key => $value) {
@@ -22,27 +26,27 @@ class Personnage {
             $this->id = $id;
         }
     }
-    public function setName($name) {
-        if (is_string($name)) {
-            $this->name = $name;
+    public function setnom($nom) {
+        if (is_string($nom)) {
+            $this->nom = $nom;
         }
     }
-    public function setStrength($strength) {
-        $strength = (int)$strength;
-        if ($strength >= 1 && $strength <= 100) {
-            $this->strength = $strength;
+    public function setforcePerso($forcePerso) {
+        $forcePerso = (int)$forcePerso;
+        if ($forcePerso >= 1 && $forcePerso <= 100) {
+            $this->forcePerso = $forcePerso;
         }
     }
-    public function setDamage($damage) {
-        $damage = (int)$damage;
-        if ($damage >= 0 && $damage <= 100) {
-            $this->damage = $damage;
+    public function setdegats($degats) {
+        $degats = (int)$degats;
+        if ($degats >= 0 && $degats <= 100) {
+            $this->degats = $degats;
         }
     }
-    public function setLevel($level) {
-        $level = (int)$level;
-        if ($level >= 1 && $level <= 100) {
-            $this->level = $level;
+    public function setniveau($niveau) {
+        $niveau = (int)$niveau;
+        if ($niveau >= 1 && $niveau <= 100) {
+            $this->niveau = $niveau;
         }
     }
     public function setExperience($experience) {
@@ -52,23 +56,21 @@ class Personnage {
         }
     }
 
-   
-    
     // getters
     public function id() {
         return $this->id;
     }
-    public function name() {
-        return $this->name;
+    public function nom() {
+        return $this->nom;
     }
-    public function strength() {
-        return $this->strength;
+    public function forcePerso() {
+        return $this->forcePerso;
     }
-    public function damage() {
-        return $this->damage;
+    public function degats() {
+        return $this->degats;
     }
-    public function level() {
-        return $this->level;
+    public function niveau() {
+        return $this->niveau;
     }
     public function experience() {
         return $this->experience;

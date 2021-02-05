@@ -12,11 +12,14 @@ class PersonnagesManager {
         // assignation des valeurs pour le nom, force, dégats etc.
         // execution de la requête
         $query = $this->db->prepare('INSERT INTO perso_list(nom, forcePerso, degats, niveau, experience) VALUES(:nom, :forcePerso, :degats, :niveau, :experience)');
-        $query->bindValue(':name', $perso->name());
-        $query->bindValue(':forcePerso', $perso->strength());
-        $query->bindValue(':degats', $perso->damage());
-        $query->bindValue(':niveau', $perso->level());
-        $query->bindValue(':experience', $perso->experience());
+  
+        $query->bindValue(':nom', $perso->nom(), PDO::PARAM_STR);
+        $query->bindValue(':forcePerso', $perso->forcePerso(), PDO::PARAM_INT);
+        $query->bindValue(':degats', $perso->degats(), PDO::PARAM_INT);
+        $query->bindValue(':niveau', $perso->niveau(), PDO::PARAM_INT);
+        $query->bindValue(':experience', $perso->experience(), PDO::PARAM_INT);
+
+        $query->execute();
     }
 
     public function delete(Personnage $perso) {
@@ -47,8 +50,8 @@ class PersonnagesManager {
         // assgne des valeurs à la requête
         // exécute la requête
         $query = $this->db->prepare('UPDATE perso_liste SET forcePerso = :forcePerso, degats = :degats, niveau = :niveau, experience = :experience WHERE id = :id');
-        $query->bindValue(':degats', $perso->damage(), PDO::PARAM_INT);
-        $query->bindValue(':niveau', $perso->level(), PDO::PARAM_INT);
+        $query->bindValue(':degats', $perso->degats(), PDO::PARAM_INT);
+        $query->bindValue(':niveau', $perso->niveau(), PDO::PARAM_INT);
         $query->bindValue(':experience', $perso->experience(), PDO::PARAM_INT);
         $query->bindValue(':id', $perso->id(), PDO::PARAM_INT);
     }
