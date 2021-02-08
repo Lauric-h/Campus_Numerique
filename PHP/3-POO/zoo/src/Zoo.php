@@ -24,7 +24,6 @@ class Zoo
     }
 
     public static function addAnimal(Animal $animal) {
-
         if ($animal instanceof CanFly) {
             if (!isset(self::$aviary)) {
                 self::$aviary = new Enclosure();
