@@ -38,7 +38,12 @@ $guestbook = new Guestbook($bdd);
 </form>
 
 <div>
-    <h2>Messages</h2>
-    <!-- add condition if guestbook is empty & display msg --> 
-    <?php $guestbook->getMessages(); ?>
+    <?php if (!empty($messages)): ?>
+        <h2>Messages</h2>
+        <!-- add condition if guestbook is empty & display msg --> 
+        <?php foreach($messages as $message): ?>
+            <?= $message->toHTML(); ?>
+        <?php endforeach ?>
+    <?php endif ?>
+        
 </div>

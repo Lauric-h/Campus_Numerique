@@ -1,6 +1,7 @@
 <?php
 
 class Guestbook {
+    private $fichier;
     public function __construct($fichier) {
         $this->fichier = $fichier;
     }
@@ -20,8 +21,8 @@ class Guestbook {
     public function getMessages() {
         $messageList = $this->fichier->query('SELECT username, message, date FROM users ORDER BY date DESC');
         while ($row = $messageList->fetch()) {
-            echo "<p><strong>" . $row['username'] . "</strong><em>le " . $row['date'] . "à 12h00</em><br>
-            ". $row['message'] . "</p>";
+            $messages[] = new Message($row['username'], $row['message'], new DateTime("@" . $row['date']));
         }
+        return $messages;
     }
 }
