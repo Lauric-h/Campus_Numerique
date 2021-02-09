@@ -6,6 +6,7 @@ class Message {
     public $username;
     public $message;
     public $date;
+    ;
 
     public function __construct(string $username, string $message, DateTime $date = null) {
         $this->username = $username;

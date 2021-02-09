@@ -5,6 +5,7 @@ require_once 'functions.php';
 require 'Class/Message.php';
 require 'Class/Guestbook.php';
 
+
 // connect to DB
 $bdd = getConnection();
 
