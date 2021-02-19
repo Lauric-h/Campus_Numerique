@@ -3,10 +3,9 @@
 class Message {
     const LIMIT_USERNAME = 3;
     const LIMIT_MESSAGE = 10;
-    public $username;
-    public $message;
-    public $date;
-    ;
+    public string $username;
+    public string $message;
+    public string $date;
 
     public function __construct(string $username, string $message, DateTime $date = null) {
         $this->username = $username;
