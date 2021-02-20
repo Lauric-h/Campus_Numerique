@@ -4,16 +4,16 @@
 ***
 ## Sujets
 - [X] UI / UX
-- [ ] Graphisme
+- [X] Graphisme
 - [X] HTML & CSS
 - [X] Algo
 - [X] Git & Github
 - [X] Système et réseaux
 - [X] PHP de base
 - [X] BDD
-- [ ] PHP POO
+- [X] PHP POO
 - [ ] Laravel
-- [ ] Méthode agile et conception de projet
+- [X] Méthode agile et conception de projet
 - [ ] JavaScript
 - [ ] Mobile
 - [ ] Java
@@ -29,7 +29,21 @@
   - Démineur (Processing)
   - Jeu de l'oie (Processing)
   - Space Invader (Processing)
-- PHP de base : site CV avec formulaire
-- BDD : base de données d'un site e-commerce en groupe
-  
+  - Différents exercices tout au long de la formation
+- PHP de base : 
+  - site CV avec formulaire
+  - site livre d'or
+- BDD : 
+  - base de données d'un site e-commerce en groupe
+  - différentes queries pour pratiquer
+- POO :
+  - TP POO Warriors
+  - TP Zoo
+  - TP To do list pour organiser et structurer le code
+
+### Projet site e-commerce
+Création d'un site e-commerce en groupe. []()
+- Story mapping, user stories, fonctionnalités etc.
+- Réalisation des maquettes et prototypes sur Figma
+- Création du site avec Laravel
 
