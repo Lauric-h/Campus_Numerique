@@ -1,20 +1,16 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Home />
-    <CitiesList />
+    <router-view></router-view>
+    
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import CitiesList from './components/CitiesList.vue'
 
 export default {
   name: 'App',
   components: {
-    Home,
-    CitiesList
   }
 }
 </script>

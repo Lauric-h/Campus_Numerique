@@ -1,10 +1,8 @@
 <template>
   <div class="hello">
     <h1>Weather by Campus Num'</h1>
+    <router-link to="villes" >Voir les villes disponible</router-link>
 
-    <a 
-    @click="onListClick"
-    href="#">Voir les villes disponibles</a>
     
   </div>
 </template>
