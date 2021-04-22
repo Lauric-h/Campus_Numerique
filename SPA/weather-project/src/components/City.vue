@@ -10,17 +10,23 @@
       <h2>Température</h2>
       <p>{{ temperature }} C</p>
     </div>
+
+    <!-- updatedAt: new Date().toLocaleString('fr-FR') // date de dernière mise à jour -->
   </div>
 </template>
 
 <script>
 export default {
+  name: 'City',
+  props: {
+    name: String,
+    weather: String,
+    temperature: String,
+    updatedAt: String
+  },
   data() {
     return {
-      name: 'Paname Town', // nom de la ville
-      weather: 'Peu nuageux', // descriptif météo 
-      temperature: 20.55, // température en °C
-      updatedAt: new Date().toLocaleString('fr-FR') // date de dernière mise à jour
+      
     }
   }
 }
