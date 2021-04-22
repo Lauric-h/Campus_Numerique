@@ -1,13 +1,14 @@
 <template>
   <div>
-    <h1>Météo de {{ name }}</h1>
+    <hr>
+    <h2>Météo de {{ name }}</h2>
     <p>Au {{ updatedAt }}</p>
     <div>
-      <h2>Temps</h2>
+      <h3>Temps</h3>
       <p>{{ weather }}</p>
     </div>
     <div>
-      <h2>Température</h2>
+      <h3>Température</h3>
       <p>{{ temperature }} C</p>
     </div>
 
