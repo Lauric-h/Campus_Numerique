@@ -1,5 +1,5 @@
 package character;
-import weapon.*;
+import item.*;
 
 /**
  * Mage class extending Character class

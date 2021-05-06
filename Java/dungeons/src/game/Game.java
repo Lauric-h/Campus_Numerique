@@ -3,8 +3,8 @@ package game;
 import java.util.ArrayList;
 
 import character.*;
+import item.*;
 import menu.*;
-import weapon.*;
 
 public class Game {
 	private boolean isStarted = false;
@@ -64,5 +64,16 @@ public class Game {
 			return;
 		}
 		this.playerAdventurer = adventurers.get(userChoice - 1);
+	}
+	
+	public void displayRules(int start, int end) {
+		System.out.println("OK ! C'est parti pour une aventure de " + end + " cases !");
+		System.out.println("Mais avant, un rappel des règles s'impose...");
+		System.out.println("Tu débutes à la case " + start);
+		System.out.println("Si tu arrives à la case " + end + " en vie, tu as gagné le jeu !");
+		System.out.println("Mais attention ! Sur ta route tu trouveras de nombreux obstacles :");
+		System.out.println("1. Les monstres, que tu devras combattre. Si tu gagnes, tu peux continuer, mais si tu perds, retour à la case départ !");
+		System.out.println("2. Les pièges, ceux-là t'enlèvent un certains nombre de points de vie, une fois à 0, retour à la case départ !");
+		System.out.println("Heureusement, tu trouveras des potions sur ton chemin pour remonter tes points de vie et arriver sain et sauf à l'arrivée...");
 	}
 }

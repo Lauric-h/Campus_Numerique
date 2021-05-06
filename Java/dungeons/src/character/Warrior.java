@@ -1,5 +1,5 @@
 package character;
-import weapon.*;
+import item.*;
 
 /**
  * Warrior class extending Character class

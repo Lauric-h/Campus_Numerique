@@ -1,9 +1,6 @@
 package menu;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-
-import character.Adventurer;
 
 /**
  * Menu abstract class

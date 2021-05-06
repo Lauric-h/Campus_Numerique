@@ -1,8 +1,6 @@
 package menu;
 
-import java.util.ArrayList;
-import character.*;
-import game.Game; 
+import game.*; 
 
 /**
  * Main menu classes
@@ -54,6 +52,21 @@ public class Main extends Menu {
 		} catch(Exception e) {
 			System.out.println(e);
 		}
+		
+		//Board game creation
+		System.out.println("Pour débuter l'aventure, combien de cases souhaites-tu ? (max 64)");
+		Board board;
+		try {
+			board = new Board(main.input.nextInt());
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("64 max on a dit !");
+			board = new Board();
+		}
+		game.displayRules(Board.getStart(), board.getMaxCells());
 	
+		
+
+		
 	}
 }

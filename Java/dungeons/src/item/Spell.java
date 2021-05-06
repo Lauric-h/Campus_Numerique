@@ -1,4 +1,4 @@
-package weapon;
+package item;
 
 /**
  * Class Spell extending Attack 
@@ -12,19 +12,18 @@ public class Spell extends Attack {
 	 * Constructor with all params
 	 * @param name
 	 * @param type
-	 * @param damage
+	 * @param value
 	 */
-	public Spell(String name, String type, int damage) {
-		super(name, type, damage);
+	public Spell(String name, String type, int value, int damage ){
+		super(name, type, value, damage);
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * Constructor with no params
-	 * Sets default values for other params
+	 * Constructor with default values
 	 */
 	public Spell() {
-		super("Sort de base", "Sort", 8);
+		super("Sort de base", "Sort", 2, 8);
 	}
 	
 }

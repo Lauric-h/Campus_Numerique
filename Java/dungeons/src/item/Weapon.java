@@ -1,4 +1,4 @@
-package weapon;
+package item;
 
 /**
  * Weapon class extending Attack
@@ -12,10 +12,11 @@ public class Weapon extends Attack {
 	 * Constructor with all params
 	 * @param name
 	 * @param type
+	 * @param value
 	 * @param damage
 	 */
-	public Weapon(String name, String type, int damage) {
-		super(name, type, damage);
+	public Weapon(String name, String type, int value, int damage) {
+		super(name, type, value, damage);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -24,7 +25,7 @@ public class Weapon extends Attack {
 	 * Sets default value for other params
 	 */
 	public Weapon() {
-		super("Epée de base", "Arme", 5);
+		super("Epée de base", "Arme", 7, 5);
 	}
 	
 

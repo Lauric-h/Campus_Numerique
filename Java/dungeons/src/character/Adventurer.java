@@ -1,5 +1,5 @@
 package character;
-import weapon.*;
+import item.*;
 
 /**
  * Class handling character attributes
