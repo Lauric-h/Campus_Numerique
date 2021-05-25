@@ -12,11 +12,11 @@
 - [X] PHP de base
 - [X] BDD
 - [X] PHP POO
-- [ ] Laravel
+- [X] Laravel
 - [X] Méthode agile et conception de projet
-- [ ] JavaScript
-- [ ] Mobile
-- [ ] Java
+- [X] JavaScript
+- [X] SPA
+- [ ] Java (en cours)
 ***
 ## Projets
 - UI / UX
@@ -40,6 +40,12 @@
   - TP POO Warriors
   - TP Zoo
   - TP To do list pour organiser et structurer le code
+- JavaScript et SPA (VueJS) : Création d'une SPA avec l'API Open Weather
+  - Utilisation d'une API
+  - Ajout de dépendances
+  - Utilisation d'Axios
+ - Java : création d'un jeu Dongeons et Dragons
+ 
 
 ### Projet site e-commerce
 Création d'un site e-commerce en groupe. []()
