@@ -8,11 +8,12 @@ import java.util.ArrayList;
 public class Board implements Map {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "BOARD_ID")
     private Long id;
     protected String name;
-    protected static final int NUMBER_OF_CASE = 64;
-    //protected ArrayList<Cell> cells = new ArrayList<Cell>();
+
+    @OneToMany
+    private ArrayList<Cell> cells = new ArrayList<Cell>();
+
     private boolean built = false;
 
     protected Board() {}

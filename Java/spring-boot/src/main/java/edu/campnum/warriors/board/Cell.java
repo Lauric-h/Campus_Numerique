@@ -3,22 +3,18 @@ package edu.campnum.warriors.board;
 import edu.campnum.warriors.items.Item;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 public class Cell {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "CELL_ID")
     private Long id;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn()
     private Item item;
 
     private int cellNumber;
-
-    private Set<BoardCell> boardCells = new HashSet<BoardCell>();
 
     protected Cell() {}
 
@@ -58,14 +54,5 @@ public class Cell {
                 ", cellNumber=" + cellNumber +
                 ", onCell='" + item + '\'' +
                 '}';
-    }
-
-    @OneToMany(mappedBy = "cell")
-    public Set<BoardCell> getBoardCells() {
-        return boardCells;
-    }
-
-    public void setBoardCells(Set<BoardCell> boardCells) {
-        this.boardCells = boardCells;
     }
 }

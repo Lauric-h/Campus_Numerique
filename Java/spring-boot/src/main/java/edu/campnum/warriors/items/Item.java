@@ -1,9 +1,7 @@
 package edu.campnum.warriors.items;
 
 import edu.campnum.warriors.board.Cell;
-
 import javax.persistence.*;
-import java.util.HashSet;
 
 @Entity
 public class Item {
@@ -20,8 +18,6 @@ public class Item {
 
 	// bonus type either life or strength (Potion or Weapon)
 	private String bonusType;
-
-	private Set<BoardCell> boardCells = new HashSet<BoardCell>();
 
 	protected Item() {};
 	
@@ -88,8 +84,4 @@ public class Item {
 				'}';
 	}
 
-	@OneToMany(mappedBy = "board")
-	public Set<BoardCell> getBoardCells() {
-		return boardCells;
-	}
 }
